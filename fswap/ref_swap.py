@@ -10,7 +10,7 @@ from .utils import *
 class RefFaceSwapping(BaseFaceSwapping):
     
     @staticmethod
-    def swap_faces(src_img, src_pt, dst_img, dst_pt, tr, clone_mode):
+    def swap_faces(src_img, src_pt, dst_img, dst_pt, tr, clone_mode=cv2.MIXED_CLONE):
         
         h, w, _ = dst_img.shape
         convexhull = cv2.convexHull(dst_pt)
